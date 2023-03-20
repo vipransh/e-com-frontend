@@ -1,5 +1,7 @@
 import React,{useState} from 'react'
 import {publicRequest} from '../requestMethods'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Signup() {
     const [userDetails, setUserDetails]=useState({
@@ -22,12 +24,16 @@ function Signup() {
                 console.log(res);
                 if(res.data?.success===true)
                 {
-                    window.alert("Account created successfully try login")
+                    toast.success("Account created successfully try login !", {
+                        position: toast.POSITION.TOP_RIGHT
+                      });
                 }
             }
             else
             {
-                window.alert("Please fill all feilds");
+                toast.error("All feilds are required !", {
+                    position: toast.POSITION.TOP_RIGHT
+                  });
             }
         }
     }
@@ -96,6 +102,7 @@ function Signup() {
             </a>.
         </div>
     </div>
+    <ToastContainer/>
 </div>
   )
 }

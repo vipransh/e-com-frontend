@@ -17,9 +17,11 @@ function Login() {
         login(dispatch,{email, password});
     };
 
+
     useEffect(()=>{
         if(success){
             navigate("/")
+           
         }
     },[navigate,success]);
 

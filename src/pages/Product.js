@@ -4,6 +4,9 @@ import { useLocation } from 'react-router-dom';
 import { getProductById } from './Helper/apiHelp';
 import { useDispatch } from 'react-redux';
 import { addProduct } from '../redux/cart';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function Product() {
   const location=useLocation();
@@ -21,6 +24,9 @@ function Product() {
     dispatch(
       addProduct(product)
     );
+    toast.success("Added to cart !", {
+      position: toast.POSITION.TOP_CENTER
+    });
   }
 
 
@@ -108,6 +114,7 @@ function Product() {
   </div>
 </section>
     </div>
+    <ToastContainer/>
     </div>
   )
 }

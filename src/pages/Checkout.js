@@ -5,6 +5,8 @@ import { userRequest } from '../requestMethods';
 import { useNavigate } from 'react-router-dom';
 import { clearCart } from '../redux/cart';
 import { useDispatch } from 'react-redux';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function Checkout() {
@@ -18,7 +20,9 @@ function Checkout() {
   const paymentHandler=async()=>{
     if(!(phoneNumber && address))
     {
-      window.alert("Please fill all shiping details")
+      toast.warn("Please fill all shiping details !", {
+        position: toast.POSITION.TOP_CENTER
+      });
     }
     else
     {
@@ -114,6 +118,7 @@ function Checkout() {
         </div>
         </div>
        </div>
+       <ToastContainer/>
     </div>
   )
 }
