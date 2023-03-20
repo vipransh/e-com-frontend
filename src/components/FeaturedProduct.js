@@ -28,7 +28,7 @@ function FeaturedProduct() {
       <div className="lg:col-span-2 lg:py-8">
         <ul className="grid grid-cols-2 gap-4">
           <li>
-            <a href="/product/63f1b5d4f7f312e044ba9d42" className="block group">
+            <div  className="block group">
               <img
                 src="https://ecom-images-2023.s3.ap-south-1.amazonaws.com/products/63f1b5d4f7f312e044ba9d42/photo_1.png"
                 alt=""
@@ -39,16 +39,14 @@ function FeaturedProduct() {
                 <h3
                   className="font-medium text-gray-900 group-hover:underline group-hover:underline-offset-4"
                 >
-                  Simple Watch
+                  Samsung Watch
                 </h3>
-
-                <p className="mt-1 text-sm text-gray-700">$150</p>
               </div>
-            </a>
+            </div>
           </li>
 
           <li>
-            <a href="/product/63f1af1af7f312e044ba9d1b" className="block group">
+            <div className="block group">
               <img
                 src="https://ecom-images-2023.s3.ap-south-1.amazonaws.com/products/63f1af1af7f312e044ba9d1b/photo_1.png"
                 alt=""
@@ -59,12 +57,12 @@ function FeaturedProduct() {
                 <h3
                   className="font-medium text-gray-900 group-hover:underline group-hover:underline-offset-4"
                 >
-                  Simple Watch
+                  Apple Watch
                 </h3>
 
-                <p className="mt-1 text-sm text-gray-700">$150</p>
+                
               </div>
-            </a>
+            </div>
           </li>
         </ul>
       </div>
