@@ -1,7 +1,8 @@
 import axios from "axios";
 
 // const BASE_URL="http://localhost:4000/api/v1/";
-const BASE_URL="https://ecombackendvip.up.railway.app/api/v1/";
+// const BASE_URL="https://ecombackendvip.up.railway.app/api/v1/";
+const BASE_URL="https://ecombackend-nqoa.onrender.com/api/v1/";
 
 const user = JSON.parse(localStorage.getItem("persist:root"))?.user;
 const currentUser = user && JSON.parse(user).currentUser;
